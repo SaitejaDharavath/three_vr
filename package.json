@@ -1,0 +1,16 @@
+{
+  "name": "vr_checking",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webvr.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "three": "^0.167.1",
+    "three-addons": "^1.2.0"
+  }
+}
