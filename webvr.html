@@ -20,7 +20,7 @@
             
             // Set up the camera
             camera = new THREE.PerspectiveCamera(30, window.innerWidth / window.innerHeight, 0.1, 100000);
-            camera.position.z = -10000;
+            camera.position.z = -100;
 
             // Set up the renderer
             renderer = new THREE.WebGLRenderer();
@@ -46,8 +46,11 @@
         }
 
         function animate() {
-            requestAnimationFrame(animate);
-            renderer.render(scene, camera);
+            // requestAnimationFrame(animate);
+            renderer.setAnimationLoop(() => {
+                renderer.render(scene, camera);
+            })
+            
         }
 
         // Initialize the scene
