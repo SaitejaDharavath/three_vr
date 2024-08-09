@@ -27,6 +27,7 @@
             renderer.setSize(window.innerWidth, window.innerHeight);
             document.body.appendChild(renderer.domElement);
             renderer.xr.enabled = true;
+            renderer.xr.setReferenceSpaceType("local");
 
             // const controls = new OrbitControls(camera, renderer.domElement);
             // controls.target.set(0, 1.6, 3);
