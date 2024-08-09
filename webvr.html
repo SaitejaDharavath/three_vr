@@ -42,6 +42,7 @@
             scene.add(cube);
 
             // Start the animation loop
+            window.addEventListener("resize", resize);
             animate();
         }
 
@@ -49,8 +50,14 @@
             // requestAnimationFrame(animate);
             renderer.setAnimationLoop(() => {
              renderer.render(scene, camera);
-            })
-            
+            });
+        }
+
+        function resize () {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+
+            renderer.setSize(window.innerWidth, window.innerHeight);
         }
 
         // Initialize the scene
