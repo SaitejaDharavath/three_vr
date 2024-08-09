@@ -38,6 +38,7 @@
 				scene.add( light );
 
 				camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 1, 2000 );
+				camera.position.z = 500;
 				scene.add( camera );
 
 				const geometry = new THREE.BoxGeometry( 100, 100, 100 ); 
