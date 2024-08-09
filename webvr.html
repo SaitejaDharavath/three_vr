@@ -22,15 +22,15 @@
             camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 10);
             camera.position.z = 5;
 
-            const controls = new OrbitControls(camera, document);
-            controls.target.set(0, 1.6, 3);
-            controls.update();
-
             // Set up the renderer
             renderer = new THREE.WebGLRenderer();
             renderer.setSize(window.innerWidth, window.innerHeight);
             document.body.appendChild(renderer.domElement);
             renderer.xr.enabled = true;
+
+            const controls = new OrbitControls(camera, renderer.domElement);
+            controls.target.set(0, 1.6, 3);
+            controls.update();
 
             // Add VRButton to the renderer
             document.body.appendChild(VRButton.createButton(renderer));
