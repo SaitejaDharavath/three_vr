@@ -14,19 +14,12 @@
 			Created by <a href="https://orfleisher.com" target="_blank" rel="noopener">@juniorxsound</a>. Panorama from <a href="https://krpano.com/examples/?depthmap" target="_blank" rel="noopener">krpano</a>.
 		</div>
 
-		<script type="importmap">
-			{
-				"imports": {
-					"three": "https://cdn.jsdelivr.net/npm/three@0.167.0/build/three.module.js",
-					"three/addons/": "https://cdn.jsdelivr.net/npm/three@0.167.0/build/examples/jsm"
-				}
-			}
-		</script>
+		
 
 		<script type="module">
 
-			import * as THREE from 'three';
-			import { VRButton } from 'three/addons/webxr/VRButton.js';
+			import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.167.0/build/three.module.js';
+			import { VRButton } from 'https://cdn.jsdelivr.net/npm/three@0.167.0/build/examples/jsm/webxr/VRButton.js';
 
 			let camera, scene, renderer, sphere, clock;
 
