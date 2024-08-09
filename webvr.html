@@ -10,6 +10,7 @@
         // Import the three.js library and VRButton from CDN
         import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.150.0/build/three.module.js';
         import { VRButton } from 'https://cdn.jsdelivr.net/npm/three@0.121.1/examples/jsm/webxr/VRButton.js'
+        import { OrbitControls } from 'cdn.jsdelivr.net/npm/three@0.121.1/examples/jsm/controls/OrbitControls'
 
         let scene, camera, renderer;
 
@@ -21,7 +22,7 @@
             camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 10);
             camera.position.z = 5;
 
-            const controls = new THREE.OrbitControls(camera, document);
+            const controls = new OrbitControls(camera, document);
             controls.target.set(0, 1.6, 3);
             controls.update();
 
