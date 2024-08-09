@@ -21,7 +21,7 @@
 			import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.167.0/build/three.module.js';
 			import { VRButton } from 'https://cdn.jsdelivr.net/npm/three@0.167.0/examples/jsm/webxr/VRButton.js';
 
-			let camera, scene, renderer, sphere, clock;
+			let camera, scene, renderer, sphere, clock, cube;
 
 			init();
 
@@ -43,7 +43,7 @@
 
 				const geometry = new THREE.BoxGeometry( 100, 100, 100 ); 
 				const material = new THREE.MeshBasicMaterial( {color: 0x00ff00} ); 
-				const cube = new THREE.Mesh( geometry, material ); 
+				cube = new THREE.Mesh( geometry, material ); 
 				scene.add( cube );
 
 				// // Create the panoramic sphere geometery
