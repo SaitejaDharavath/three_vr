@@ -36,7 +36,7 @@
             document.body.appendChild(VRButton.createButton(renderer));
 
             // Add a cube to the scene
-            const geometry = new THREE.BoxGeometry(10, 10, 10);
+            const geometry = new THREE.BoxGeometry(1000, 1000, 1000);
             const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
             const cube = new THREE.Mesh(geometry, material);
             scene.add(cube);
