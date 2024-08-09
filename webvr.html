@@ -31,6 +31,12 @@
             renderer.xr.enabled = true;
             renderer.xr.setReferenceSpaceType("local");
 
+            const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
+            const directionalLight = new THREE.DirectionalLight(0xffffff, 0.4);
+            directionalLight.position.set(0, 1, -1);
+            scene.add(ambientLight, directionalLight);
+
+
             // const controls = new OrbitControls(camera, renderer.domElement);
             // controls.target.set(0, 1.6, 3);
             // controls.update();
