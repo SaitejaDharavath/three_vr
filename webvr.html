@@ -20,6 +20,7 @@
 
 			import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.167.0/build/three.module.js';
 			import { VRButton } from 'https://cdn.jsdelivr.net/npm/three@0.167.0/examples/jsm/webxr/VRButton.js';
+			import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.167.0/examples/jsm/controls/OrbitControls.js';
 
 			let camera, scene, renderer, sphere, clock, cube;
 
@@ -38,8 +39,9 @@
 				scene.add( light );
 
 				camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 1, 20000 );
-				camera.position.set(0, 1000, 1000);
+				const helper = new THREE.CameraHelper(camera);
 				scene.add( camera );
+				scene.add(helper);
 
 
 				const geometry = new THREE.BoxGeometry( 1000, 1000, 1000 ); 
